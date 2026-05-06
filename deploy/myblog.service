@@ -1,0 +1,26 @@
+[Unit]
+Description=Mo Blog
+Documentation=https://github.com/gascs/mo
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/myblog
+ExecStart=/opt/myblog/myblog -c /opt/myblog/config.yaml
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=5
+LimitNOFILE=65536
+
+# Security hardening
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/opt/myblog
+ReadOnlyPaths=/etc/ssl/certs
+
+[Install]
+WantedBy=multi-user.target

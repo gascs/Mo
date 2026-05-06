@@ -1,0 +1,12 @@
+node_modules
+web/node_modules
+web/dist
+*.exe
+*.db
+test_*.db
+test_*.yaml
+backups/
+certs/
+uploads/
+.git/
+.DS_Store

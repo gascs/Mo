@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Build output
+web/dist/
+myblog
+myblog.exe
+*.exe~
+
+# Database
+*.db
+test_*.db
+
+# Runtime
+backups/
+certs/
+uploads/
+data/
+
+# Config (may contain secrets)
+config.yaml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.log
